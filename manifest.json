@@ -1,0 +1,19 @@
+{
+    "manifest_version": 1,
+    "version": "0.0.1",
+    "short_name": "TEAM KAGAYAKITAI",
+    "name": "TEAM KAGAYAKITAI",
+    "start_url": "/",
+    "theme_color": "#409cc3",
+    "background_color": "#F0A20B",
+    "display": "standalone",
+    "orientation": "portrait",
+    "description": "Official Website of Team KAGAYAKITAI, now working on BRAND NEW WAVE Project for the Aqours Live on July 5th and 6th!",
+    "icons": [
+        {
+            "src": "/assets/icons/512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
