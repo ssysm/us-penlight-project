@@ -7,7 +7,7 @@
       "**/node_modules/**"
     ],
     "appAssociation": "AUTO",
-    "rewrites": [ { "source": "/ref/**", "dynamicLinks": true } ]
+    "rewrites": [ { "source": "/qr/**", "dynamicLinks": true } ]
   },
   "storage": {
     "rules": "storage.rules"
