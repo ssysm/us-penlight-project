@@ -3,7 +3,11 @@
     "public": ".",
     "ignore": [
       "firebase.json",
+      "**/.git/**",
+      "**/.github/**",
+      "storage.rules",
       "**/.*",
+      "README.md",
       "**/node_modules/**"
     ],
     "appAssociation": "AUTO",
