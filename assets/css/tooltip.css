@@ -1,0 +1,30 @@
+#countdown {
+    font-size: 45px;
+}
+
+.back-to-top {
+    background: none;
+    margin: 0;
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 100;
+    display: none;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 50%;
+    background-color: grey;
+    opacity: 0.7;
+    transition: .5s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.back-to-top:hover {
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2), 0 24px 80px 0 rgba(0, 0, 0, 0.19);
+}
+
+.back-to-top i {
+    font-size: 60px;
+}

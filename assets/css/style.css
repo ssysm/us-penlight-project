@@ -1,0 +1,25 @@
+html {
+    font-family: 'Raleway', sans-serif;
+    background-color: #FFFDE8;
+}
+.text-center{
+    text-align: center;
+}
+.banner-img {
+    width: 100%;
+    max-height: 70vh;
+}
+.intro{
+    text-align: center;
+}
+@media only screen and (min-width: 992px) {
+    #navbar-brand {
+        padding-left: 20px
+    }
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}

@@ -1,65 +1,399 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/6.0.4/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/6.0.4/firebase-auth.js"></script>
-    <script defer src="/__/firebase/6.0.4/firebase-database.js"></script>
-    <script defer src="/__/firebase/6.0.4/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/6.0.4/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TEAM KAGAYAKITAI - US Penlight Project For Aqours AX 2019</title>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+  <!--Style-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.3.12/plyr.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/color.css">
+  <link rel="stylesheet" href="./assets/css/tooltip.css">
+  <!--Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <!--Javascript Lib-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+
+<body class="main" id="index">
+  <!--[if IE]>
+    <div class="ie">
+        <div class="container">
+            <h1>
+                You are using IE...
+            </h1>
+            <a href="https://browsehappy.com/?locale=en" target="_blank">
+                <p>You can click here and download one of those browsers and try again.</p>
+            </a>
+        </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <![endif]-->
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  <!--Navbar-->
+  <nav class="chika-bg-orange">
+    <div class="nav-wrapper">
+      <a href="#index" class="brand-logo" id="navbar-brand">KAGAYAKITAI</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#aqourainbow">Aqourainbow</a>
+        </li>
+        <li>
+          <a href="#kananrail">Kananrail</a>
+        </li>
+        <li>
+          <a href="#yousoroad">Yousoroad</a>
+        </li>
+        <li>
+          <a href="#no10rainbow">No.10 Rainbow</a>
+        </li>
+        <li>
+          <a href="#demoVideo">Instructional/Demo Video</a>
+        </li>
+        <li>
+          <a href="#seatInfo">Seat Info</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+      </ul>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+      <li>
+        <a href="#home">Home</a>
+      </li>
+      <li>
+        <a href="#aqourainbow">Aqourainbow</a>
+      </li>
+      <li>
+        <a href="#kananrail">Kananrail</a>
+      </li>
+      <li>
+        <a href="#yousoroad">Yousoroad</a>
+      </li>
+      <li>
+        <a href="#no10rainbow">No.10 Rainbow</a>
+      </li>
+      <li>
+        <a href="#demoVideo">Instructional/Demo Video</a>
+      </li>
+      <li>
+        <a href="#seatInfo">Seat Info</a>
+      </li>
+      <li>
+        <a href="#about">About</a>
+      </li>
+    </ul>
+  </nav>
+  <!--Banner-->
+  <div class="banner" id="home">
+    <img src="./assets/img/banner.png" alt="TK-banner" class="banner-img">
+  </div>
+  <!--Main-->
+  <main>
+    <div class="container">
+      <!--Intro Text-->
+      <div class="intro">
+        <h5 class="text-center">Official Website of Team KAGAYAKITAI, now working on BRAND NEW WAVE Project for the Aqours Live on July 5th and 6th!</h5>
+        <p class="text-center" id="title">
+          <a href="https://twitter.com/teamkagayakitai?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+            data-show-count="false">Follow @teamkagayakitai</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <br>
+          <!-- <a class="waves-effect waves-light btn-large modal-trigger" href="#promoVideo">
+            <i class="material-icons">ondemand_video</i>&nbsp;Watch Promo Video</a> -->
+        </p>
+      </div>
+      <!--Navcard-->
+      <div class="row">
+        <div class="col s12 m3">
+          <div class="card">
+            <a href="#aqourainbow">Aqourainbow</a>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <div class="card">
+            <a href="#Kananrail">Kananrail</a>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <div class="card">
+            <a href="#yousoroad">Yousoroad</a>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <div class="card">
+            <a href="#no10rainbow">No.10 Rainbow</a>
+          </div>
+        </div>
+      </div>
+      <!--Aqurainbow-->
+      <div class="row card" id="aqourainbow">
+        <div class="col l7 s12">
+          <h3 class="text-center">What is <span class="chika-orange">Aqourainbow</span>?</h3>
+          <p>In <b class="chika-orange">Yuuki Wa Doko Ni? Kimi No Mune Ni!</b> the verse before Chika's solo, please
+            hide your penlight by tucking under your arm, or lowering it behind your seat in front of you.The theater
+            should turn completely dark during this time.</p>
+          <p class="you-blue text-center"><b>Aaah, atsuku naru imi ga wakari katete</b></p>
+          <p>While your penlight is hidden, swap to the assigned color, then wait your cue to be sung.</p>
+          <p>Bring up your penlight with the first syllable of your lyrics. Continbue raising your penlight for the rest
+            of the solo.</p>
+          <p class="text-center"><b class="mari-purple">Kokoro ga</b>&nbsp;<b class="kanan-green">motomeru</b>&nbsp;<b
+              class="dia-red">hokorashi</b><b class="yoshiko-gray">sa Hashiri</b>&nbsp;<b class="ruby-pink">tsudzukete
+              tsuka</b><b class="maru-yellow">meru mirai</b>&nbsp;<b class="riko-pink">Yume ga(takusam)</b>&nbsp;<b
+              class="you-blue">Yume ga(takusan)</b>&nbsp;<b class="chika-orange">Kienai(Yume ga)</b></p>
+          <p>After the rainbow is formed, please keep your assigned color for the remainder of the song!</p>
+        </div>
+        <div class="col l5 s12">
+          <div class="video-container card">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Rj1IMG4QtTM?start=207" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <!--End Of Aqourainbow-->
+      <!--Kananrail-->
+      <div class="row card" id="kananrail">
+        <div class="col l5 s12">
+          <div class="video-container card">
+            <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/eVwdeIDjXeM?rel=0&amp;showinfo=0&amp;start=312" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col l7 s12">
+          <h3>What is
+            <span class="kanan-green">Kananrail</span>?</h3>
+          <p>Kananrail takes place during
+            <span class="kanan-green">Happy Party Train</span>. The goal is to emulate the shining railroad tracks in
+            the animated music
+            video.
+          </p>
+          <p>
+            Seats that are part of the railroad tracks are normally the left and right sections of the theater.
+          </p>
+          </p>
+        </div>
+      </div>
+      <!--End of Kanarail-->
+      <!--Yousoroad-->
+      <div class="row card" id="yousoroad">
+        <div class="col l7 s12">
+          <h3>What is
+            <span class="you-blue">Yousoroad</span>?</h3>
+          <p>Yousoroad takes place during You Watanabe’s solo in
+            <span class="you-blue">Koi ni Naritai AQUARIUM.
+            </span>
+            The goal is to re-create the shining blue road in the animated music video.</p>
+          <p>
+            Seats that are part of the blue light road are the middle strip of the theater
+          </p>
+        </div>
+        <div class="col l5 s12">
+          <div class="video-container card">
+            <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/Qj0Dmwxv-KY?rel=0&amp;showinfo=0&amp;start=286" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <!--End of Yousoroad-->
+      <!--No.10 Rainbow-->
+      <div class="row card" id="no10rainbow">
+        <div class="col l5 s12">
+          <div class="video-container card">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/QkmhgO6AFQo?start=365" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col l7 s12">
+          <h3 class="text-center">What is
+            <span class="chika-orange">No.</span><span class="you-blue">10</span>&nbsp;
+            <span class="riko-pink">R</span><span class="maru-yellow">a</span><span class="ruby-pink">i</span><span
+              class="yoshiko-gray">n</span><span class="dia-red">b</span><span class="kanan-green">o</span><span
+              class="mari-purple">w</span>?</h3>
+          <p>In <span class="dia-red">No.10</span>, before Aqours starts counting,please
+            hide your penlight by tucking under your arm, or lowering it behind your seat in front of you.The theater
+            should turn completely dark during this time.</p>
+          <p>While your penlight is hidden, swap to the assigned color, then wait your cue to be sung.</p>
+          <h5 class="text-center">
+            <span class="chika-orange">Ichi,</span><span class="you-blue">Ni,</span><span class="riko-pink">San,</span>
+            <br>
+            <span class="maru-yellow">Yon,</span><span class="ruby-pink">Go,</span><span
+              class="yoshiko-gray">Roku,</span>
+            <br>
+            <span class="dia-red">Nana,</span><span class="kanan-green">Hachi,</span><span
+              class="mari-purple">Jyuu</span>
+            <br>
+            <span>Juu!</span>
+          </h5>
+          <p>Bring up your penlight with the count of your assigned member. Please keep your penlight up for the
+            remainder of the song!</p>
+        </div>
+      </div>
+      <!--End of No.10 Rainbow-->
+      <!--demo Video-->
+      <div class="row card" id="demoVideo">
+        <div class="col l8 s12">
+          <!-- <video id="yousorailPlayer" class="video responsive-video" controls>
+                  <source src="./assets/video/Yousorail_60s.mp4" type="video/mp4">
+              </video> -->
+          Should be a video here...
+        </div>
+        <div class="col l4 s12">
+          <h3 class="text-center">Demonstration Video</h3>
+          <p style="font-size:2.5rem;">Watch this for a short demonstration of what to do!</p>
+        </div>
+      </div>
+      <!--End of demo Video-->
+      <!--Instr. Video-->
+      <div class="row card">
+        <div class="col l4 s12">
+          <h3 class="text-center">Instructional Video</h3>
+          <p style="font-size:2.5rem;">Watch this instructional video for details on The NOVO Theater layout!</p>
+        </div>
+        <div class="col l8 s12">
+          <div class="video-container">
+            Another Video Should be here...
+          </div>
+        </div>
+      </div>
+      <!--End of Instr. Video-->
+      <div class="row card" id="seatInfo">
+        <div class="col l4 s12">
+          <h4 class="text-center">Select Your Seat</h4>
+          <div class="input-field col s12" id="levelSelectForm">
+            <select id="levelSelect">
+              <option value="" disabled selected>Choose your Level</option>
+              <option value="F">Floor Level</option>
+              <option value="B">Balcony Level</option>
+            </select>
+            <label>Level Area</label>
+          </div>
+          <div class="input-field col s12 hide" id="flAreaSelectForm">
+              <select id="flAreaSelect">
+                <option value="" disabled selected>Choose your Floor Area</option>
+                <option value="C">Center</option>
+                <option value="S">Side</option>
+              </select>
+              <label>Floor Level Area</label>
+            </div>
+          <div class="input-field col s12 hide" id="rowSelectForm">
+              <select id="rowSelect">
+                <option value="" disabled selected>Choose your Row</option>
+                <option value="AA">AA</option>
+                <option value="BB">BB</option>
+                <option value="CC">CC</option>
+                <option value="DD">DD</option>
+                <option value="EE">EE</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="G">G</option>
+                <option value="H">H</option>
+                <option value="J">J</option>
+                <option value="K">K</option>
+                <option value="L">L</option>
+                <option value="M">M</option>
+                <option value="N">N</option>
+              </select>
+              <label>Row Letter</label>
+          </div>
+          <div class="input-field col s12 hide" id="sectionSelectForm">
+              <select id="sectionSelect">
+                <option value="" disabled selected>Choose your Section</option>
+                <option value="101">101</option>
+                <option value="201">201</option>
+                <option value="301">301</option>
+              </select>
+              <label>Section Number</label>
+            </div>          
+        </div>
+        <div class="col l8 s12">
+          <h4>For Aqourainbow: <span id="aqurainbowColor"> - </span></h4>
+          <h4>For No.10 Rainbow: <span id="no10rainbowColor"> - </span></h4>
+          <h4>For Kananrail: <span id="kananrailColor"> - </span></h4>
+          <h4>For Yousoroad: <span id="yousoroadColor"> - </span></h4>
+        </div>
+      </div>
+      <!--Info Widget-->
+      <div class="row" id="about">
+        <div class="col l6 s12 card">
+          <a class="twitter-timeline" data-height="500" data-theme="light"
+            href="https://twitter.com/teamkagayakitai?ref_src=twsrc%5Etfw">Tweets by teamkagayakitai</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class="col l5 s12 offset-l1 card countdown-timer">
+          <h3>Time until live :</h3>
+          <p id="countdown"></p>
+        </div>
+      </div>
+      <!--End of Info Widget-->
+    </div>
+  </main>
+  <!--End of Main-->
+  <!--Footer-->
+  <footer class="page-footer chika-bg-orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l10 s12">
+          <h5 class="white-text">KAGAYAKITAI </h5>
+          <p class="grey-text text-lighten-4">
+            Something something something...
+          </p>
+        </div>
+        <div class="col l2 s12">
+          <h5 class="white-text">Social Media</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://twitter.com/teamkagayakitai">
+                <i class="fab fa-twitter-square"></i>&nbsp;@teamkagayakitai</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://www.facebook.com/teamkagayakitai/">
+                <i class="fab fa-facebook-square"></i>&nbsp;teamkagayakitai</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="mailto:teamkagayakitai@gmail.com">
+                <i class="fas fa-envelope"></i>&nbsp;Email
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        &copy; 2019 TEAM KAGAYAKITAI
+      </div>
+    </div>
+  </footer>
+  <!--End of footer-->
+  <!--Back2Top Widget-->
+  <a href="#index" class="back-to-top" style="display: none;">
+    <i class="material-icons">arrow_upward</i>
+  </a>
+  <!--End of Back2Top-->
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/rainbow-select.js"></script>
+  <script src="./assets/js/tools/back2top.js"></script>
+  <script src="./assets/js/tools/countdown.js"></script>
+</body>
 
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
 </html>
