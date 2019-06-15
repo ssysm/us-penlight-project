@@ -5,7 +5,9 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "appAssociation": "AUTO",
+    "rewrites": [ { "source": "/ref/**", "dynamicLinks": true } ]
   },
   "storage": {
     "rules": "storage.rules"
