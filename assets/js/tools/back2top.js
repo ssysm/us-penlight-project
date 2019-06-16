@@ -1,3 +1,7 @@
+/**
+ * This is widget for back to top
+ * @event scroll
+ */
 window.addEventListener("scroll",onScroll);
 var back2topBtn = document.getElementsByClassName("back-to-top")[0];
 function onScroll(event){

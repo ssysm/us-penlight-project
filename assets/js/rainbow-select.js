@@ -1,3 +1,7 @@
+/**
+ * This is the script for seat selection
+ * @interface Object userSeat
+ */
 //Seating Select
 let levelSelect         = document.querySelector('#levelSelect'),
     flAreaSelect        = document.querySelector('#flAreaSelect'),
@@ -37,6 +41,10 @@ let userSeat =
     area:"C"
 };
 //Event Handler
+/**
+ * Level process is handled after Level is Selected
+ * @param {ChangeEvent} event F -> Floor B/Else -> Bal.
+ */
 function handleLevel(event)
 {
     userSeat.seating = event.target.value;
@@ -65,7 +73,10 @@ function handleLevel(event)
         sectionSelectForm.classList.add('show');
     }
 }
-
+/**
+ * Floor Area Process is handled after Floor Level Section is selected
+ * @param {ChangeEvent} event 
+ */
 function handleFlArea(event)
 {
     userSeat.area = event.target.value;
@@ -80,7 +91,10 @@ function handleFlArea(event)
         kananrailColor.innerHTML = kananrailColorText;
     }
 }
-
+/**
+ * Row Select Process is handled after Row is being selected
+ * @param {ChangeEvent} event Row Number
+ */
 function handleRow(event)
 {
     userSeat.row = event.target.value;
@@ -164,7 +178,10 @@ function handleRow(event)
             break;
     }
 }
-
+/**
+ * Section Process is handled after Section of Bal. is being selected
+ * @param {ChangeEvent} event 101/201/301
+ */
 function handleSection(event)
 {
     userSeat.section = event.target.value;
