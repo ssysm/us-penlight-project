@@ -23,3 +23,10 @@ html {
 .show{
     display: block;
 }
+.socialLink li{
+    padding: 2px;
+}
+
+.socialLink li>a{
+    font-size: 1.25rem;
+}
