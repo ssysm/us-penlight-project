@@ -11,7 +11,23 @@
       "**/node_modules/**"
     ],
     "appAssociation": "AUTO",
-    "rewrites": [ { "source": "/qr/**", "dynamicLinks": true } ]
+    "rewrites": [ { "source": "/qr/**", "dynamicLinks": true } ],
+    "headers": [
+      {
+        "source": "**/*.html",
+        "headers":[{
+          "key": "Cache-Control",
+          "value": "max-age=0, no-cache"
+        }]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png|css|js)",
+        "headers": [{
+          "key": "Cache-Control",
+          "value": "max-age=3500"
+        }]
+      }
+    ]
   },
   "storage": {
     "rules": "storage.rules"
