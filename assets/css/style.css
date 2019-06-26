@@ -26,7 +26,12 @@ html {
 .socialLink li{
     padding: 2px;
 }
-
 .socialLink li>a{
     font-size: 1.25rem;
+}
+.modal {
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+    max-height: 75vh;
 }

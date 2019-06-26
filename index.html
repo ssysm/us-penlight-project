@@ -36,6 +36,7 @@
   <meta name="theme-color" content="#F0A20B">
   <link rel="manifest" href="/manifest.json">
   <!--Style-->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.3.12/plyr.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/color.css">
@@ -47,6 +48,7 @@
     integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <!--Javascript Lib-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdn.plyr.io/3.3.12/plyr.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142127625-1"></script>
   <script>
@@ -153,8 +155,8 @@
             data-show-count="false">Follow @teamkagayakitai</a>
           <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           <br>
-          <!-- <a class="waves-effect waves-light btn-large modal-trigger" href="#promoVideo">
-            <i class="material-icons">ondemand_video</i>&nbsp;Watch Promo Video</a> -->
+          <a class="waves-effect waves-light btn-large modal-trigger" href="#promoVideo">
+            <i class="material-icons">ondemand_video</i>&nbsp;Watch Promo Video</a>
         </p>
       </div>
       <!--Navcard-->
@@ -448,6 +450,13 @@
     <i class="material-icons">arrow_upward</i>
   </a>
   <!--End of Back2Top-->
+  <!--Modal-->
+  <div id="promoVideo" class="modal video-modal">
+    <video id="promoPlayer" class="video" playsinline controls>
+        <source src="https://us-penlight-project.s3-us-west-1.amazonaws.com/bnw_project_pv_x264.mp4" type="video/mp4">
+    </video>
+</div>
+<!--End Of Modal-->
   <!--Scripts-->
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/rainbow-select.js"></script>
